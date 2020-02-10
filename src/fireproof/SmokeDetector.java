@@ -38,7 +38,7 @@ public class SmokeDetector {
 	
 	public boolean checkAlarm(float smokeLevel) {
 		if (smokeLevel>threshold) {
-			System.out.println(rooms.length + " are at risk.");
+			System.out.println((rooms.length-roomsAvailable) + " rooms are at risk.");
 			for(int i=0;i<(100-roomsAvailable);i++) {
 					System.out.println("Room :"+ rooms[i].getName() + " is at risk");			
 			}
